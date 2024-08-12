@@ -1,7 +1,9 @@
-import { Custom } from "./Custom.stories";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Button } from "../Button";
+import { Button } from "rainbow";
+import { Custom } from "./Custom.stories";
+// @ts-expect-error - required for ts
+import CustomSource from "./Custom.stories?raw";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -28,7 +30,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     primary: true,
-    label: "Button",
+    label: "Button123",
   },
 };
 
@@ -52,4 +54,13 @@ export const Small: Story = {
   },
 };
 
-export { Custom } from "./Custom.stories";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(Custom as any).parameters = {
+  docs: {
+    source: {
+      code: CustomSource,
+    },
+  },
+};
+
+export { Custom };
