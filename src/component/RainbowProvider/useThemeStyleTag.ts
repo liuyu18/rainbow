@@ -1,7 +1,8 @@
 import * as React from "react";
+import { RainbowProviderProps } from "rainbow-ui";
 import { createCSSRuleFromTheme } from "./createCSSRuleFromTheme";
-import { RainbowProviderProps } from "./RainbowProvider";
 
+// 生成style标签,id
 const createStyleTag = (
   target: Document | undefined,
   elementAttributes: Record<string, string>
@@ -35,14 +36,11 @@ const insertSheet = (tag: HTMLStyleElement, rule: string) => {
 
 export const useThemeStyleTag = ({ theme }: Partial<RainbowProviderProps>) => {
   const generatedId = React.useId();
-
   const escapedId = React.useMemo(
     () => generatedId.replace(/:/g, ""),
     [generatedId]
   );
-
-  const themeClassName = "fish-ui-FishProvider" + escapedId;
-
+  const themeClassName = "rainbow-ui-FishProvider" + escapedId;
   const rule = React.useMemo(
     () => createCSSRuleFromTheme(`.${themeClassName}`, theme),
     [theme, themeClassName]

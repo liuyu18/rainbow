@@ -1,1 +1,1 @@
-export * from './RainbowProvider'
+export * from "./RainbowProvider";

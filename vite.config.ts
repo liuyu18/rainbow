@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      rainbow: path.resolve(__dirname, "./src/index.ts"),
+      "rainbow-ui": path.resolve(__dirname, "./src/index.ts"),
     },
   },
 });

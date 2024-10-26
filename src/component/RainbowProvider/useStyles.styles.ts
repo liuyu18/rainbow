@@ -1,6 +1,5 @@
-import { RainbowProviderProps } from "./RainbowProvider";
 import { makeStyles, mergeClasses } from "@griffel/react";
-import { tokens } from "../../tokens";
+import { RainbowProviderProps, tokens } from "rainbow-ui";
 import { useThemeStyleTag } from "./useThemeStyleTag";
 
 const fishProviderClassNames = {
@@ -15,8 +14,12 @@ const useBaseStyles = makeStyles({
   },
 });
 
-export const useStyle = ({ className, theme }: Partial<RainbowProviderProps>) => {
+export const useStyles = ({
+  className,
+  theme,
+}: Partial<RainbowProviderProps>) => {
   const baseStyles = useBaseStyles();
+  // 根据theme创建cssrules
   const { themeClassName } = useThemeStyleTag({ theme });
   return mergeClasses(
     fishProviderClassNames.root,

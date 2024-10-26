@@ -20,7 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "rainbow": ["./src/index.ts"]
+      "rainbow-ui": ["./src/index.ts"]
     }
   },
   "include": ["src"]

@@ -1,12 +1,12 @@
-import { Button } from "rainbow";
+import { Button } from "rainbow-ui";
 import { makeStyles } from "@griffel/react";
 
 const useClasses = makeStyles({
-    root: {
-      backgroundColor: "yellow",
-      padding: "100px",
-    },
-  });
+  root: {
+    backgroundColor: "yellow",
+    padding: "100px",
+  },
+});
 
 export const Custom = () => {
   const styles = useClasses();

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header } from "rainbow";
+import { Header } from "rainbow-ui";
 import "./page.css";
 
 type User = {

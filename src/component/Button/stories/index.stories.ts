@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Button } from "rainbow";
+import { Button } from "rainbow-ui";
 import { Custom } from "./Custom.stories";
 // @ts-expect-error - required for ts
 import CustomSource from "./Custom.stories?raw";

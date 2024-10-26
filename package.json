@@ -1,5 +1,5 @@
 {
-  "name": "rainbow",
+  "name": "rainbow-ui",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@griffel/react": "^1.5.25",
-    "rainbow": "file:",
+    "rainbow-ui": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
